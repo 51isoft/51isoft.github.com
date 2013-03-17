@@ -4,19 +4,19 @@
 AUTHOR = u'51isoft'
 SITENAME = u"51isoft's Blog"
 SITEURL = ''
+OUTPUT_PATH = '51isoft.github.com/'
+THEME = 'theme_bootstrap'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Asia/Shanghai'
 
 DEFAULT_LANG = u'cn'
 
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),
-          ('You can modify those links in your config file', '#'),)
+LINKS =  (('BNUOJ', 'http://www.bnuoj.com/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', 'http://twitter.com/51isoft'),
+          ('Facebook', 'http://facebook.com/51isoft'),
+          ('Linkedin', 'http://cn.linkedin.com/pub/chao-yi/49/544/42b'),)
 
 DEFAULT_PAGINATION = 10
