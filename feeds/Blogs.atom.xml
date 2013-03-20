@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/Blogs.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-03-17T23:15:00+08:00</updated><entry><title>继续，前行</title><link href="http://51isoft.github.com/journey-on.html" rel="alternate"></link><updated>2013-03-17T23:15:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-17:journey-on.html</id><summary type="html">&lt;h2&gt;起&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/Blogs.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-03-20T15:00:00+08:00</updated><entry><title>2013-03-20工作报告</title><link href="http://51isoft.github.com/weekly-report-2013-03-20.html" rel="alternate"></link><updated>2013-03-20T15:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-20:weekly-report-2013-03-20.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将BNUOJ的代码从GOOGLE CODE迁移到了GITHUB上，学习了GIT的使用。&lt;/li&gt;
+&lt;li&gt;继续修正了现有代码的BUG。&lt;/li&gt;
+&lt;li&gt;由于现在后台部分使用的网络代码在非本机（lo）大文件传输时会卡死，所以研究了下网络库，初步考虑使用陈硕师兄写的Muduo，下周学习下。&lt;/li&gt;
+&lt;li&gt;搭了个BLOG，以后每周工作或者技术文章都往BLOG放好了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;下周：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将剩余的功能移植到新OJ上：ADMIN，比赛的CHALLENGE功能。&lt;/li&gt;
+&lt;li&gt;修复一下之前迁移服务器遗失的SPJ。&lt;/li&gt;
+&lt;li&gt;项目还做不做？&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>继续，前行</title><link href="http://51isoft.github.com/journey-on.html" rel="alternate"></link><updated>2013-03-17T23:15:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-17:journey-on.html</id><summary type="html">&lt;h2&gt;起&lt;/h2&gt;
 &lt;p&gt;唔，计划了N久N久，说要写博客。（目测起码三四年了？……）但是老是各种原因没有下手去做，这次终于下定决心要写一写博客了。
 具体来说，首先是因为Google把Reader关了（我可以说脏话么？），而我又是重度的Reader用户（没Reader看新闻好麻烦，不喜在微博上看新闻），
 顿时对Google的服务产生了各种不信任感。一看，Google Code不也是不赚钱的货？万一哪天把Google Code也关了，到时候再想迁移就比较匆忙了。

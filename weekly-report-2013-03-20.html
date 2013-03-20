@@ -15,7 +15,15 @@
 	<link href="./theme/bootstrap.min.css" rel="stylesheet">
 	<link href="./theme/local.css" rel="stylesheet">
 	<link href="./theme/pygments.css" rel="stylesheet">
-		<script>
+		<script type="text/javascript">
+	var disqus_identifier = "weekly-report-2013-03-20.html";
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://51isoftsblog.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -32,7 +40,7 @@
 		<div class="container-fluid">
 		  <a class="brand" href="./index.html">51isoft's Blog</a>
 			<ul class="nav">
-																										<li ><a href="./category/blogs.html">Blogs</a></li>
+																										<li class="active"><a href="./category/blogs.html">Blogs</a></li>
 							</ul>
 			<p class="pull-right"><a href="./archives.html">[archives]</a> <a href="./tags.html">[tags]</a></p>
 		</div>
@@ -60,11 +68,29 @@
 		</div>
 	  </div>
 	  <div class="content">
-			<div class="page-header"><h1>51isoft's Blog <small>[tags]</small></h1></div>			<ul>
-	<li><a href="./tag/test.html">test</a></li>
-	<li><a href="./tag/personal.html">personal</a></li>
-	<li><a href="./tag/weekly-report.html">weekly-report</a></li>
-</ul>
+							<div class='article'>
+		<div class="page-header"><h1>2013-03-20工作报告</h1></div>
+		<div class="well small">@ 2013-03-20 15:00:00
+ by <a class="url fn" href="./author/51isoft.html">51isoft</a> 
+in <a href="./category/blogs.html">Blogs</a>
+tags: <a href="./tag/weekly-report.html">weekly-report</a> </div>
+		<div><h3>已做：</h3>
+<ol>
+<li>将BNUOJ的代码从GOOGLE CODE迁移到了GITHUB上，学习了GIT的使用。</li>
+<li>继续修正了现有代码的BUG。</li>
+<li>由于现在后台部分使用的网络代码在非本机（lo）大文件传输时会卡死，所以研究了下网络库，初步考虑使用陈硕师兄写的Muduo，下周学习下。</li>
+<li>搭了个BLOG，以后每周工作或者技术文章都往BLOG放好了。</li>
+</ol>
+<h3>下周：</h3>
+<ol>
+<li>将剩余的功能移植到新OJ上：ADMIN，比赛的CHALLENGE功能。</li>
+<li>修复一下之前迁移服务器遗失的SPJ。</li>
+<li>项目还做不做？</li>
+</ol></div>
+		<div>
+			<h2>Comments</h2>
+		 				<div id="disqus_thread"></div>					<div>
+	</div>	
 		<footer>
 		  <p> Powered by <a href="http://alexis.notmyidea.org/pelican/">Pelican</a>, theme based on <a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a>.</p>
 		  <p>&copy; 51isoft 2013</p>
