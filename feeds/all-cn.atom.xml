@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/all-cn.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-04-03T14:00:00+08:00</updated><entry><title>2013-04-03工作报告</title><link href="http://51isoft.github.com/weekly-report-2013-04-03.html" rel="alternate"></link><updated>2013-04-03T14:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-03:weekly-report-2013-04-03.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/all-cn.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-04-09T23:32:17+08:00</updated><entry><title>Boost学习日志1</title><link href="http://51isoft.github.com/boost-learning-1.html" rel="alternate"></link><updated>2013-04-09T23:32:17+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-09:boost-learning-1.html</id><summary type="html">&lt;p&gt;前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……&lt;/p&gt;
+&lt;h3&gt;配置环境&lt;/h3&gt;
+&lt;p&gt;首先安装Homebrew，因为我懒得自己编译……而且我一直觉得如果有别人编译好了的，而你又没有什么奇葩需求的话，没有什么必要去自行编译……Homebrew的安装方式就不赘述了。&lt;/p&gt;
+&lt;p&gt;然后执行&lt;code&gt;brew install boost&lt;/code&gt;，就搞定了boost安装，安装目录在&lt;code&gt;/usr/local/Cellar/boost&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;接下来是可选步骤了：安装G++ 4.8。先&lt;code&gt;brew tap homebrew/versions&lt;/code&gt;，接下来&lt;code&gt;brew install gcc48&lt;/code&gt;。（吐槽下，编译真慢……）&lt;/p&gt;
+&lt;p&gt;然后在Netbeans的C/C++选项卡里面添加一个工具集合，设置下CLang或者G++4.8，然后新建工程，在工程属性里面，加入编译选项：&lt;code&gt;-std=c++0x&lt;/code&gt;，并且添加动态链接库。&lt;/p&gt;
+&lt;p&gt;然后应该就搞定了，嗯。。。&lt;/p&gt;
+&lt;h3&gt;学习笔记&lt;/h3&gt;
+&lt;p&gt;今天学习了下第二章关于时间和日期的那部分，表示boost的日期类真是各种碉堡啊。。。。虽然表示的时间范围没有Java那么Bug吧，但是基本功能还是够用了。
+另外，写timer真是方便极了，精神上通过ptime和time_duration就可以搞掂，最后取一下total_milliseconds就行了（PS：这家伙居然还可以搞到纳秒……）&lt;/p&gt;
+&lt;p&gt;另外，每用一个东西都有极大的可能要使用一个新的命名空间，所以要么就是&lt;code&gt;using namespace&lt;/code&gt;写一坨，要么就是各种&lt;code&gt;XXX::YYY&lt;/code&gt;了，当然还可以&lt;code&gt;#define&lt;/code&gt;……&lt;/p&gt;
+&lt;p&gt;再有，在学习过程中，扫了一眼Boost官网，发现了很多奇奇怪怪的强大东西，例如&lt;a href="http://www.boost.org/doc/libs/1_53_0/libs/geometry/doc/html/geometry/reference/algorithms.html"&gt;这个&lt;/a&gt;，完爆我ACM期间使用的几何库啊有木有……
+求重心（2D、3D）、凸包、判相交、判覆盖、算周长……真是什么都有啊……不过可能还是比Java的几何库少点？（没用过，不了解呃……）&lt;/p&gt;
+&lt;p&gt;最后说点C++11吧，表示for+auto看起来真爽……但是估计短时间内在我们这种渣渣学校是没有老师会教C++11吧？Boost也有自己的foreach，但是目前我还不知道有什么特点，
+所以还没有使用过。Lambda算子、函数编程什么的目前处于完全不会的状态，但是看很多人都说函数式编程效率高、大势所趋什么的，压力十分十分大……&lt;/p&gt;
+&lt;h3&gt;幻想（？）&lt;/h3&gt;
+&lt;p&gt;唉，先按部就班的学习Boost吧。再列下一些希望能在下学期开学前起码做到会用的技术：Node.js、Python、Android基本开发。应该不算想的太多吧……&lt;/p&gt;</summary><category term="boost"></category><category term="C++11"></category></entry><entry><title>2013-04-03工作报告</title><link href="http://51isoft.github.com/weekly-report-2013-04-03.html" rel="alternate"></link><updated>2013-04-03T14:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-03:weekly-report-2013-04-03.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;新OJ功能已经修复完全，修改了部分UI和BUG，具体可以看GITHUB上的COMMIT记录。&lt;/li&gt;
 &lt;li&gt;开始学习Boost，之后再学习Muduo。&lt;/li&gt;
