@@ -3,9 +3,9 @@
 
 AUTHOR = u'51isoft'
 SITENAME = u"51isoft's Blog"
-SITEURL = 'http://51isoft.github.com'
+SITEURL = 'http://blog.51isoft.com'
 OUTPUT_PATH = '../51isoft.github.com/'
-FEED_DOMAIN = 'http://51isoft.github.com'
+FEED_DOMAIN = 'http://blog.51isoft.com'
 THEME = 'tuxlite_zf'
 DISQUS_SITENAME = '51isoftsblog'
 
