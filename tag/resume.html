@@ -1,83 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>51isoft's Blog</title>
-	<meta name="description" content="">
-	<meta name="author" content="51isoft">
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="../theme/html5.js"></script>
-	<![endif]-->
+    <title>51isoft's Blog - resume</title>
 
-	<!-- Le styles -->
-	<link href="../theme/bootstrap.min.css" rel="stylesheet">
-	<link href="../theme/local.css" rel="stylesheet">
-	<link href="../theme/pygments.css" rel="stylesheet">
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-39363189-1', '51isoft.com');
-  ga('send', 'pageview');
-
-</script>
+    <link rel="stylesheet" href="../theme/css/normalize.css">
+    <link rel="stylesheet" href="../theme/css/foundation.min.css">
+    <link rel="stylesheet" href="../theme/css/style.css">
+    <link rel="stylesheet" href="../theme/css/pygments.css">	
+    <script src="../theme/js/custom.modernizr.js"></script>
 </head>
+
 <body>
-			<div class="topbar">
-	  <div class="topbar-inner">
-		<div class="container-fluid">
-		  <a class="brand" href="../index.html">51isoft's Blog</a>
-			<ul class="nav">
-																										<li ><a href="../category/blogs.html">Blogs</a></li>
-							</ul>
-			<p class="pull-right"><a href="../archives.html">[archives]</a> <a href="../tags.html">[tags]</a></p>
-		</div>
-	  </div>
-	</div>
 
-	<div class="container-fluid">
-	  <div class="sidebar">
-		<div class="well">
-			<h3>Links</h3>
-			<ul>
-								<li><a href="http://www.bnuoj.com/">BNUOJ</a></li>
-							</ul>
-			<div class="social">
-			<h3>Social</h3>
-			<ul>
-				<li><a href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate">RSS feed</a></li>
-								<li><a href="http://twitter.com/51isoft">Twitter</a></li>
-								<li><a href="http://facebook.com/51isoft">Facebook</a></li>
-								<li><a href="http://cn.linkedin.com/pub/chao-yi/49/544/42b">Linkedin</a></li>
-								<li><a href="http://weibo.com/51isoft">Weibo</a></li>
-								<li><a href="http://github.com/51isoft">Github</a></li>
-							</ul>
-			</div>
-		</div>
-	  </div>
-	  <div class="content">
-			<div class="page-header"><h1>51isoft's Blog <small>resume</small></h1></div>			
-<div class='article'>
-	<h2><a href="../setting-up-xelatex-on-mac.html">在Mac上配置TeX环境以及中文支持</a></h2>
-	<div class="well small">@ 2013-04-12 19:43:39
- by <a class="url fn" href="../author/51isoft.html">51isoft</a> 
-in <a href="../category/blogs.html">Blogs</a>
-tags: <a href="../tag/xelatex.html">XeLaTeX</a> <a href="../tag/mac.html">Mac</a> <a href="../tag/resume.html">resume</a> </div>
-	<div class="summary">为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）…… <a href="../setting-up-xelatex-on-mac.html"> [Read more...]</a>
-	</div>
-</div>	
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="..">51isoft's Blog</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+	
+                    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
 
 
-		<footer>
-		  <p> Powered by <a href="http://alexis.notmyidea.org/pelican/">Pelican</a>, theme based on <a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a>.</p>
-		  <p>&copy; 51isoft 2013</p>
-		</footer>
-	  </div>
+<!-- Main Page Content and Sidebar -->
+<div class="row">
 
-	</div>
-</body>
-</html>
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+            
+            
+
+                            <article>
+                <h3 class="article-title"><a href="../setting-up-xelatex-on-mac.html">在Mac上配置TeX环境以及中文支持</a></h3>
+                <h6 class="subheader" title="2013-04-12T19:43:39">五 12 四月 2013
+    </h6>
+
+
+<p>为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
+不过为了装装X，还是决定搞一下了……</p>
+<h3>准备工作</h3>
+<p>MacTeX下载地址：<a href="https://www.tug.org/mactex/downloading.html">https://www.tug.org/mactex/downloading.html</a></p>
+<h3>配置</h3>
+<ol>
+<li>
+<p>下载完成之后（TeX真TMD大啊），双击MacTeX.pkg进行安装。</p>
+</li>
+<li>
+<p>在TeX文件文件头，使用如下代码：</p>
+<p><code>
+\documentclass[UTF8,nofonts]{ctexart}<br>
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
+</code></p>
+<p>例子：</p>
+<p><code>
+\documentclass[UTF8,nofonts]{ctexart}<br>
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}<br>
+\begin{document}<br>
+我是汉字啊！<br>
+\end{document}<br>
+</code></p>
+</li>
+<li>
+<p>用TeXworks打开.tex文件，选择XeLaTeX生成PDF文件，嗯，然后你就可以看到成品了。</p>
+</li>
+<li>
+<p>如果字体提示不对，那么请在终端里面使用<code>fc-list</code>命令查看你的系统有的字体，然后替换<code>setCJKmainfont</code>部分的字体。</p>
+</li>
+</ol>
+<h3>其他</h3>
+<p>我的简历可以在我的Github上看到，求各大公司包养啊！！！嗯，看起来MacTeX的中文也不是那么难搞嘛……</p><p class="subheader">Category: <a href="../category/blogs.html">Blogs</a>
+
+    Tagged: 
+        <a href="../tag/xelatex.html">XeLaTeX </a>
+        <a href="../tag/mac.html">Mac </a>
+        <a href="../tag/resume.html">resume </a>
+    </p>
+
+
+
+<p><a href="../setting-up-xelatex-on-mac.html#disqus_thread">comments</a></p>            </article>
+
+                            <div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+    
+    </p>
+</div>
+            
+            
+                
+                    <!-- /#posts-list -->
+                        
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="../archives.html">Archives</a>
+            <li><a href="../tags.html">Tags</a>
+                                </ul>
+
+        		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+                    <li><a href="../category/blogs.html">Blogs</a></li>
+           
+        </ul>
+        
+                <h5 class="sidebar-title">Links</h5>
+        <ul class="side-nav">
+                    <li><a href="http://www.bnuoj.com/">BNUOJ</a></li>
+                </ul>
+        		
+		        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+                    <li><a href="http://twitter.com/51isoft">Twitter</a></li>
+                    <li><a href="http://facebook.com/51isoft">Facebook</a></li>
+                    <li><a href="http://cn.linkedin.com/pub/chao-yi/49/544/42b">Linkedin</a></li>
+                    <li><a href="http://weibo.com/51isoft">Weibo</a></li>
+                    <li><a href="http://github.com/51isoft">Github</a></li>
+                </ul>
+        
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+                <p>51isoft's Blog by 51isoft</p>
+            </div>
+            </div>
+    </div>
+</footer>
