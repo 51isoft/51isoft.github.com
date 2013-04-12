@@ -4,7 +4,6 @@ Tags: bnuoj, transtion, jQueryUI, Bootstrap, jQuery
 Category: Blogs
 Slug: stuff-about-bnuoj-1
 Author: 51isoft
-Summary: V3相比V2的改变还是很多的，首先从用户的角度来看的话，UI换成Bootstrap了，虽然被一些人吐槽说丑吧（例如LSY……）但是绝大多数的反馈还是不错的。
 
 先吐槽下：感觉pelican这种Date需要手写的真是奇葩呀，不能从文件属性里面读取最近修改时间？可能怕产生多次RSS推送么？
 然后鼠须管输入法用起来还是很舒爽的，恩，就是默认词库好弱啊！！所以我又用回QQ了我会乱说么……（懒得折腾了，QQ其实也还不错so……）

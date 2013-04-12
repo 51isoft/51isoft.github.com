@@ -4,7 +4,6 @@ Tags: XeLaTeX, Mac, resume
 Category: Blogs
 Slug: setting-up-xelatex-on-mac
 Author: 51isoft
-Summary: 为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……
 
 为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
 不过为了装装X，还是决定搞一下了……

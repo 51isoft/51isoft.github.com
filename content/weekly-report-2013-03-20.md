@@ -4,7 +4,6 @@ Tags: weekly-report
 Category: Blogs
 Slug: weekly-report-2013-03-20
 Author: 51isoft
-Summary: 2013-03-13 至 2013-03-20 的工作报告
 
 ### 已做：
 

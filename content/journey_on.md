@@ -4,7 +4,7 @@ Tags: personal
 Category: Blogs
 Slug: journey-on
 Author: 51isoft
-Summary: 唔，计划了N久N久，说要写博客。（目测起码三四年了？……）但是老是各种原因没有下手去做，这次终于下定决心要写一写博客了。
+Summary: 唔，计划了N久N久，说要写博客。（目测起码三四年了？……）但是老是各种原因没有下手去做，这次终于下定决心要写一写博客了。具体来说，首先是因为Google把Reader关了（我可以说脏话么？），而我又是重度的Reader用户（没Reader看新闻好麻烦，不喜在微博上看新闻），顿时对Google的服务产生了各种不信任感。一看，Google Code不也是不赚钱的货？万一哪天把Google Code也关了，到时候再想迁移就比较匆忙了……
 
 起
 --------

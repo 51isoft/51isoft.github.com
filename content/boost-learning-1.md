@@ -4,7 +4,6 @@ Tags: boost, C++11
 Category: Blogs
 Slug: boost-learning-1
 Author: 51isoft
-Summary: Boost学习日志：前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了……
 
 前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……
 
