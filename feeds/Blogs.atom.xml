@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/Blogs.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-04-12T19:43:39+08:00</updated><entry><title>在Mac上配置TeX环境以及中文支持</title><link href="http://51isoft.github.com/setting-up-xelatex-on-mac.html" rel="alternate"></link><updated>2013-04-12T19:43:39+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-12:setting-up-xelatex-on-mac.html</id><summary type="html">&lt;p&gt;为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
+<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://blog.51isoft.com/" rel="alternate"></link><link href="http://blog.51isoft.com/feeds/Blogs.atom.xml" rel="self"></link><id>http://blog.51isoft.com/</id><updated>2013-04-12T19:43:39+08:00</updated><entry><title>在Mac上配置TeX环境以及中文支持</title><link href="http://blog.51isoft.com/setting-up-xelatex-on-mac.html" rel="alternate"></link><updated>2013-04-12T19:43:39+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-12:setting-up-xelatex-on-mac.html</id><summary type="html">&lt;p&gt;为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
 不过为了装装X，还是决定搞一下了……&lt;/p&gt;
 &lt;h3&gt;准备工作&lt;/h3&gt;
 &lt;p&gt;MacTeX下载地址：&lt;a href="https://www.tug.org/mactex/downloading.html"&gt;https://www.tug.org/mactex/downloading.html&lt;/a&gt;&lt;/p&gt;
@@ -31,7 +31,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;其他&lt;/h3&gt;
-&lt;p&gt;我的简历可以在我的Github上看到，求各大公司包养啊！！！嗯，看起来MacTeX的中文也不是那么难搞嘛……&lt;/p&gt;</summary><category term="XeLaTeX"></category><category term="Mac"></category><category term="resume"></category></entry><entry><title>Boost学习日志1</title><link href="http://51isoft.github.com/boost-learning-1.html" rel="alternate"></link><updated>2013-04-09T23:32:17+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-09:boost-learning-1.html</id><summary type="html">&lt;p&gt;前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……&lt;/p&gt;
+&lt;p&gt;我的简历可以在我的Github上看到，求各大公司包养啊！！！嗯，看起来MacTeX的中文也不是那么难搞嘛……&lt;/p&gt;</summary><category term="XeLaTeX"></category><category term="Mac"></category><category term="resume"></category></entry><entry><title>Boost学习日志1</title><link href="http://blog.51isoft.com/boost-learning-1.html" rel="alternate"></link><updated>2013-04-09T23:32:17+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-09:boost-learning-1.html</id><summary type="html">&lt;p&gt;前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……&lt;/p&gt;
 &lt;h3&gt;配置环境&lt;/h3&gt;
 &lt;p&gt;首先安装Homebrew，因为我懒得自己编译……而且我一直觉得如果有别人编译好了的，而你又没有什么奇葩需求的话，没有什么必要去自行编译……Homebrew的安装方式就不赘述了。&lt;/p&gt;
 &lt;p&gt;然后执行&lt;code&gt;brew install boost&lt;/code&gt;，就搞定了boost安装，安装目录在&lt;code&gt;/usr/local/Cellar/boost&lt;/code&gt;。&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;p&gt;最后说点C++11吧，表示for+auto看起来真爽……但是估计短时间内在我们这种渣渣学校是没有老师会教C++11吧？Boost也有自己的foreach，但是目前我还不知道有什么特点，
 所以还没有使用过。Lambda算子、函数编程什么的目前处于完全不会的状态，但是看很多人都说函数式编程效率高、大势所趋什么的，压力十分十分大……&lt;/p&gt;
 &lt;h3&gt;幻想（？）&lt;/h3&gt;
-&lt;p&gt;唉，先按部就班的学习Boost吧。再列下一些希望能在下学期开学前起码做到会用的技术：Node.js、Python、Android基本开发。应该不算想的太多吧……&lt;/p&gt;</summary><category term="boost"></category><category term="C++11"></category></entry><entry><title>2013-04-03工作报告</title><link href="http://51isoft.github.com/weekly-report-2013-04-03.html" rel="alternate"></link><updated>2013-04-03T14:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-03:weekly-report-2013-04-03.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
+&lt;p&gt;唉，先按部就班的学习Boost吧。再列下一些希望能在下学期开学前起码做到会用的技术：Node.js、Python、Android基本开发。应该不算想的太多吧……&lt;/p&gt;</summary><category term="boost"></category><category term="C++11"></category></entry><entry><title>2013-04-03工作报告</title><link href="http://blog.51isoft.com/weekly-report-2013-04-03.html" rel="alternate"></link><updated>2013-04-03T14:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-03:weekly-report-2013-04-03.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;新OJ功能已经修复完全，修改了部分UI和BUG，具体可以看GITHUB上的COMMIT记录。&lt;/li&gt;
 &lt;li&gt;开始学习Boost，之后再学习Muduo。&lt;/li&gt;
@@ -59,7 +59,7 @@
 &lt;li&gt;继续修复一下迁移服务器遗失的SPJ。&lt;/li&gt;
 &lt;li&gt;开始联系兄弟院校参加北师大校赛的事宜。&lt;/li&gt;
 &lt;li&gt;了解了解Android开发，看看能不能在移动端拓展一些功能。&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>BNUOJv2转v3开发记录1</title><link href="http://51isoft.github.com/stuff-about-bnuoj-1.html" rel="alternate"></link><updated>2013-03-22T17:13:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-22:stuff-about-bnuoj-1.html</id><summary type="html">&lt;p&gt;先吐槽下：感觉pelican这种Date需要手写的真是奇葩呀，不能从文件属性里面读取最近修改时间？可能怕产生多次RSS推送么？
+&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>BNUOJv2转v3开发记录1</title><link href="http://blog.51isoft.com/stuff-about-bnuoj-1.html" rel="alternate"></link><updated>2013-03-22T17:13:00+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-03-22:stuff-about-bnuoj-1.html</id><summary type="html">&lt;p&gt;先吐槽下：感觉pelican这种Date需要手写的真是奇葩呀，不能从文件属性里面读取最近修改时间？可能怕产生多次RSS推送么？
 然后鼠须管输入法用起来还是很舒爽的，恩，就是默认词库好弱啊！！所以我又用回QQ了我会乱说么……（懒得折腾了，QQ其实也还不错so……）&lt;/p&gt;
 &lt;p&gt;正题了，V3相比V2的改变还是很多的，首先从用户的角度来看的话，UI换成Bootstrap了，虽然被一些人吐槽说丑吧（例如LSY……）但是绝大多数的反馈还是不错的。
 然后从我的角度来说，网页端目前是完全重构了。之前那个版本，估计在我毕业之后就没有人维护的下去了……所以重构了一下，所有涉及数据库操作的统统放到FUNCTIONS和AJAX里面去。
@@ -71,7 +71,7 @@
 因为感觉直接换不太靠谱，而且据说兼容性问题也是有一些的。另外也是逼迫自己学习学习Bootstrap啦。12列的设计方式很爽的说，不用去算像素什么的，而且加上响应式之后，
 连移动端都有出色的表现（当然还得配合一点其他插件啦）。换风格、换流动式布局也是相当的方便。目前所能想到的唯一问题是：Bootstrap也开始烂大街了，看到顶头导航栏就觉得
 是Boostrap……&lt;/p&gt;
-&lt;p&gt;嗯，接下来应该要把Admin部分迁移过来了，Challenge功能什么的，可能先放一放吧，目测需求不大的样子。接下来后台服务端的重写应该计划计划咯。&lt;/p&gt;</summary><category term="bnuoj"></category><category term="transtion"></category><category term="jQueryUI"></category><category term="Bootstrap"></category><category term="jQuery"></category></entry><entry><title>2013-03-20工作报告</title><link href="http://51isoft.github.com/weekly-report-2013-03-20.html" rel="alternate"></link><updated>2013-03-20T15:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-20:weekly-report-2013-03-20.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
+&lt;p&gt;嗯，接下来应该要把Admin部分迁移过来了，Challenge功能什么的，可能先放一放吧，目测需求不大的样子。接下来后台服务端的重写应该计划计划咯。&lt;/p&gt;</summary><category term="bnuoj"></category><category term="transtion"></category><category term="jQueryUI"></category><category term="Bootstrap"></category><category term="jQuery"></category></entry><entry><title>2013-03-20工作报告</title><link href="http://blog.51isoft.com/weekly-report-2013-03-20.html" rel="alternate"></link><updated>2013-03-20T15:00:00+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-03-20:weekly-report-2013-03-20.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;将BNUOJ的代码从GOOGLE CODE迁移到了GITHUB上，学习了GIT的使用。&lt;/li&gt;
 &lt;li&gt;继续修正了现有代码的BUG。&lt;/li&gt;
@@ -83,7 +83,7 @@
 &lt;li&gt;将剩余的功能移植到新OJ上：ADMIN，比赛的CHALLENGE功能。&lt;/li&gt;
 &lt;li&gt;修复一下之前迁移服务器遗失的SPJ。&lt;/li&gt;
 &lt;li&gt;项目还做不做？&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>继续，前行</title><link href="http://51isoft.github.com/journey-on.html" rel="alternate"></link><updated>2013-03-17T23:15:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-17:journey-on.html</id><summary type="html">&lt;h2&gt;起&lt;/h2&gt;
+&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>继续，前行</title><link href="http://blog.51isoft.com/journey-on.html" rel="alternate"></link><updated>2013-03-17T23:15:00+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-03-17:journey-on.html</id><summary type="html">&lt;h2&gt;起&lt;/h2&gt;
 &lt;p&gt;唔，计划了N久N久，说要写博客。（目测起码三四年了？……）但是老是各种原因没有下手去做，这次终于下定决心要写一写博客了。
 具体来说，首先是因为Google把Reader关了（我可以说脏话么？），而我又是重度的Reader用户（没Reader看新闻好麻烦，不喜在微博上看新闻），
 顿时对Google的服务产生了各种不信任感。一看，Google Code不也是不赚钱的货？万一哪天把Google Code也关了，到时候再想迁移就比较匆忙了。
@@ -127,4 +127,4 @@ ACM服务器DOWN过几次，上面有VPN服务，结果有次DOWN，没启动VPN
 &lt;p&gt;初恋结束了，BAD Ending，不过统计说初恋成功率只有千分之四，我和她算是有缘没份吧。&lt;/p&gt;
 &lt;p&gt;At last，虽然她不见得能&amp;amp;会看这篇文章，不过还是祝福她，在24岁时能像她博客里面写的24岁那样幸福。另外，如果你洁癖的话，你的电话卡还是我的名字登记的呢，要过户找我。&lt;/p&gt;
 &lt;p&gt;而我，恋爱的事情先放一放吧，这事还是要靠缘分的。还是先沉下心做一年技术吧。留给我的时间也不多了，下半年要找实习了。明年就要工作了。在不积累点东西，真的就没有公司要我了。&lt;/p&gt;
-&lt;h1&gt;&lt;em&gt;继续，前行……&lt;/em&gt;&lt;/h1&gt;</summary><category term="personal"></category></entry><entry><title>第一篇文章</title><link href="http://51isoft.github.com/first-article.html" rel="alternate"></link><updated>2013-03-17T14:20:00+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-03-17:first-article.html</id><summary type="html">&lt;p&gt;呜啦啦～～测试一下啊～&lt;/p&gt;</summary><category term="test"></category></entry></feed>
+&lt;h1&gt;&lt;em&gt;继续，前行……&lt;/em&gt;&lt;/h1&gt;</summary><category term="personal"></category></entry><entry><title>第一篇文章</title><link href="http://blog.51isoft.com/first-article.html" rel="alternate"></link><updated>2013-03-17T14:20:00+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-03-17:first-article.html</id><summary type="html">&lt;p&gt;呜啦啦～～测试一下啊～&lt;/p&gt;</summary><category term="test"></category></entry></feed>
