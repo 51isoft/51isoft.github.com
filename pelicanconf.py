@@ -8,6 +8,8 @@ OUTPUT_PATH = '../51isoft.github.com/'
 FEED_DOMAIN = 'http://blog.51isoft.com'
 THEME = 'tuxlite_zf'
 DISQUS_SITENAME = '51isoftsblog'
+TWITTER_USERNAME = '51isoft'
+GOOGLE_ANALYTICS = 'UA-39363189-1'
 
 TIMEZONE = 'Asia/Shanghai'
 
