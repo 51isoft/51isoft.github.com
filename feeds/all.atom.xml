@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/all.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-04-09T23:32:17+08:00</updated><entry><title>Boost学习日志1</title><link href="http://51isoft.github.com/boost-learning-1.html" rel="alternate"></link><updated>2013-04-09T23:32:17+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-09:boost-learning-1.html</id><summary type="html">&lt;p&gt;前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://51isoft.github.com/" rel="alternate"></link><link href="http://51isoft.github.com/feeds/all.atom.xml" rel="self"></link><id>http://51isoft.github.com/</id><updated>2013-04-12T19:43:39+08:00</updated><entry><title>在Mac上配置TeX环境以及中文支持</title><link href="http://51isoft.github.com/setting-up-xelatex-on-mac.html" rel="alternate"></link><updated>2013-04-12T19:43:39+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-12:setting-up-xelatex-on-mac.html</id><summary type="html">&lt;p&gt;为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
+不过为了装装X，还是决定搞一下了……&lt;/p&gt;
+&lt;h3&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;MacTeX下载地址：&lt;a href="https://www.tug.org/mactex/downloading.html"&gt;https://www.tug.org/mactex/downloading.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;配置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载完成之后（TeX真TMD大啊），双击MacTeX.pkg进行安装。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在TeX文件文件头，使用如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;
+\documentclass[UTF8,nofonts]{ctexart}&lt;br&gt;
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;
+\documentclass[UTF8,nofonts]{ctexart}&lt;br&gt;
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}&lt;br&gt;
+\begin{document}&lt;br&gt;
+我是汉字啊！&lt;br&gt;
+\end{document}&lt;br&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用TeXworks打开.tex文件，选择XeLaTeX生成PDF文件，嗯，然后你就可以看到成品了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果字体提示不对，那么请在终端里面使用&lt;code&gt;fc-list&lt;/code&gt;命令查看你的系统有的字体，然后替换&lt;code&gt;setCJKmainfont&lt;/code&gt;部分的字体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;其他&lt;/h3&gt;
+&lt;p&gt;我的简历可以在我的Github上看到，求各大公司包养啊！！！嗯，看起来MacTeX的中文也不是那么难搞嘛……&lt;/p&gt;</summary><category term="XeLaTeX"></category><category term="Mac"></category><category term="resume"></category></entry><entry><title>Boost学习日志1</title><link href="http://51isoft.github.com/boost-learning-1.html" rel="alternate"></link><updated>2013-04-09T23:32:17+08:00</updated><author><name>51isoft</name></author><id>tag:51isoft.github.com,2013-04-09:boost-learning-1.html</id><summary type="html">&lt;p&gt;前一段买了《Boost程序库完全开发指南》，今天真正开始阅读这本大部头了。我用的环境是OS X 10.8.3 + Netbeans 7.3 + G++ 4.8/CLang++ 4.1，微微有些奇葩……&lt;/p&gt;
 &lt;h3&gt;配置环境&lt;/h3&gt;
 &lt;p&gt;首先安装Homebrew，因为我懒得自己编译……而且我一直觉得如果有别人编译好了的，而你又没有什么奇葩需求的话，没有什么必要去自行编译……Homebrew的安装方式就不赘述了。&lt;/p&gt;
 &lt;p&gt;然后执行&lt;code&gt;brew install boost&lt;/code&gt;，就搞定了boost安装，安装目录在&lt;code&gt;/usr/local/Cellar/boost&lt;/code&gt;。&lt;/p&gt;
