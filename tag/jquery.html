@@ -56,7 +56,81 @@
             
 
                             <article>
-                <h3 class="article-title"><a href="../stuff-about-bnuoj-1.html">BNUOJv2转v3开发记录1</a></h3>
+                <h3 class="article-title"><a href="../bnu-sctl-js-fix.html">北师大本科教务系统JS修正</a></h3>
+                <h6 class="subheader" title="2013-04-14T19:00:00">日 14 四月 2013
+    </h6>
+
+
+<p>读本科的时候就对学校教务系统不能在Chrome下使用这件事情感到十分的不爽，一直想修正一下这个问题，但拖到本科毕业都没搞……研究生之后发现，
+和现在使用的系统相比，本科那套系统真是太智能了，可惜我不用了……研二闲下来之后，前些日子终于决定开始搞一下这个问题了～～</p>
+<h3>问题描述</h3>
+<p><a href="http://sctl.bnu.edu.cn/jwmis/">北师大本科教务系统</a>在Chrome下是不能切换系统的TAB（JS脚本错误），所以没法进入到登录界面。然后即使直接从登陆FRAME的URL进行登陆，
+也无法正常跳转到系统的界面。</p>
+<h3>解决</h3>
+<p>为了方便，直接就JS注入好了，而CHROME下JS注入最方便的就是写扩展了，主界面的JS错误不会影响注入JS执行。</p>
+<h4>TAB切换问题</h4>
+<p>在主页上，每一个Tab连接都有个onclick事件：<code>onclick=ToLink(this)</code>。然而在ToLink函数中，有这么个错误：
+<code>Uncaught TypeError: Cannot read property 'length' of undefined</code>。直接导致CHROME无法正确的加载TAB页面，解决方法也很直接，替换掉他的ONCLICK事件，
+我的做法比较粗暴：
+<code>
+<pre>
+$("span[onclick='ToLink(this)']").click(function(){
+    var vHref=$(this).attr("value");
+    if(vHref.length&lt;18) return false;
+    $("iframe[name='frmHomeShow']").attr("src",vHref);
+    event.preventDefault();
+});
+$("span[onclick='ToLink(this)']").removeAttr("onclick");
+</pre>
+</code></p>
+<p>貌似没啥难度哈……</p>
+<h4>登陆问题</h4>
+<p>简单的来说，就是在那个诡异的界面，登陆完之后，就会一直卡在加载权限数据这一个奇葩的状态下。当你再次刷新的时候他却提示你已登录……另外点击图片也没法刷新验证码。
+原因还是各种js错误，比如<code>Uncaught SyntaxError: Unexpected token .</code></p>
+<p>对于验证码刷新，还是没什么难度：</p>
+<p><code>
+<pre>
+$("#imgCode").removeAttr("onclick").click(function() {
+    var dt = new Date();
+    this.src="../sys/ValidateCode.aspx?t="+dt.getMilliseconds();
+});
+</pre>
+</code></p>
+<p>而对于登陆跳转，我找了半天愣是没找到原来的JS在什么鬼地方…………只能采取奇奇怪怪的方法了，最后写出了如下代码……</p>
+<p><code>
+<pre>
+if ($("#divLogNote").text()=="正在加载权限数据...") window.top.location.href="../MAINFRM.aspx";
+if (window.location.pathname.toLowerCase()=="/jwmis/_data/index_LoginNote.aspx".toLowerCase()) window.top.location.href="../MAINFRM.aspx";
+</pre>
+</code></p>
+<p>奇葩的解决了这个问题……</p>
+<h4>存在的Bug</h4>
+<p>目前各种弹出窗口的显示都有问题，各种白板，即使我已经修复了URL链接问题，介于看的人应该不多，先不折腾他了……</p>
+<h3>其他</h3>
+<p>咳咳，这货已经可以再Web store上下载到了，地址在<a href="https://chrome.google.com/webstore/detail/%E5%8C%97%E5%B8%88%E5%A4%A7%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9Fjs%E4%BF%AE%E6%AD%A3/ffkgjadiejddlbljnapiafglhgkhbpck">这里</a>
+截图什么的懒得搞了……</p>
+<p>以后想起什么有趣的功能（比如GPA计算什么的）可能会更新更新……</p><p class="subheader">Category: <a href="../category/blogs.html">Blogs</a>
+
+    Tagged: 
+        <a href="../tag/bnu.html">BNU </a>
+        <a href="../tag/sctl.html">sctl </a>
+        <a href="../tag/js.html">js </a>
+        <a href="../tag/jquery.html">jQuery </a>
+    </p>
+
+
+
+<p><a href="../bnu-sctl-js-fix.html#disqus_thread">comments</a></p>            </article>
+
+            
+                            <hr  class="gradient"/>
+            
+                
+                    
+
+                
+            <article>
+                <a href="../stuff-about-bnuoj-1.html"><h3 class="article-title">BNUOJv2转v3开发记录1</h3></a>
                 <h6 class="subheader" title="2013-03-22T17:13:00">五 22 三月 2013
     </h6>
 
@@ -70,10 +144,7 @@
 然后根文件夹里面就是各种前台页面了，前台页面不直接使用SQL语句，凡事有需要都调用functions里面的函数。另外像JS啊，CSS啊之类的也没有之前那么多文件夹了
 （之前datatables自己就是一个media文件夹），看着没这么烦了。</p>
 <p>前台方面的话，我抛弃jQueryUI了，因为……实在太丑了……转来转去觉得Bootstrap好像很不错的样子，所以果断就换掉了。其实有个jQueryUI的Bootstrap风格的项目，但是我没考虑，
-因为感觉直接换不太靠谱，而且据说兼容性问题也是有一些的。另外也是逼迫自己学习学习Bootstrap啦。12列的设计方式很爽的说，不用去算像素什么的，而且加上响应式之后，
-连移动端都有出色的表现（当然还得配合一点其他插件啦）。换风格、换流动式布局也是相当的方便。目前所能想到的唯一问题是：Bootstrap也开始烂大街了，看到顶头导航栏就觉得
-是Boostrap……</p>
-<p>嗯，接下来应该要把Admin部分迁移过来了，Challenge功能什么的，可能先放一放吧，目测需求不大的样子。接下来后台服务端的重写应该计划计划咯。</p><p class="subheader">Category: <a href="../category/blogs.html">Blogs</a>
+因为感觉直接换不太靠谱，而且据说兼容性问题也是有一些的 ...</p><p class="subheader">Category: <a href="../category/blogs.html">Blogs</a>
 
     Tagged: 
         <a href="../tag/bnuoj.html">bnuoj </a>
@@ -85,8 +156,11 @@
 
 
 
-<p><a href="../stuff-about-bnuoj-1.html#disqus_thread">comments</a></p>            </article>
-
+<p><a href="../stuff-about-bnuoj-1.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="../stuff-about-bnuoj-1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
+                    <!-- /#posts-list -->
                             <div class="pagination-centered">
 <h6 class="subheader">Page 1 of 1</h6>
 
@@ -94,10 +168,6 @@
     
     </p>
 </div>
-            
-            
-                
-                    <!-- /#posts-list -->
                         
     </div>
     <!-- End Main Content -->
@@ -129,6 +199,7 @@
                     <li><a href="http://cn.linkedin.com/pub/chao-yi/49/544/42b">Linkedin</a></li>
                     <li><a href="http://weibo.com/51isoft">Weibo</a></li>
                     <li><a href="http://github.com/51isoft">Github</a></li>
+                    <li><a href="http://about.me/yichao">About.me</a></li>
                 </ul>
         
     </aside> <!-- End Sidebar -->

@@ -56,7 +56,81 @@
             
 
                             <article>
-                <h3 class="article-title"><a href="./setting-up-xelatex-on-mac.html">在Mac上配置TeX环境以及中文支持</a></h3>
+                <h3 class="article-title"><a href="./bnu-sctl-js-fix.html">北师大本科教务系统JS修正</a></h3>
+                <h6 class="subheader" title="2013-04-14T19:00:00">日 14 四月 2013
+    </h6>
+
+
+<p>读本科的时候就对学校教务系统不能在Chrome下使用这件事情感到十分的不爽，一直想修正一下这个问题，但拖到本科毕业都没搞……研究生之后发现，
+和现在使用的系统相比，本科那套系统真是太智能了，可惜我不用了……研二闲下来之后，前些日子终于决定开始搞一下这个问题了～～</p>
+<h3>问题描述</h3>
+<p><a href="http://sctl.bnu.edu.cn/jwmis/">北师大本科教务系统</a>在Chrome下是不能切换系统的TAB（JS脚本错误），所以没法进入到登录界面。然后即使直接从登陆FRAME的URL进行登陆，
+也无法正常跳转到系统的界面。</p>
+<h3>解决</h3>
+<p>为了方便，直接就JS注入好了，而CHROME下JS注入最方便的就是写扩展了，主界面的JS错误不会影响注入JS执行。</p>
+<h4>TAB切换问题</h4>
+<p>在主页上，每一个Tab连接都有个onclick事件：<code>onclick=ToLink(this)</code>。然而在ToLink函数中，有这么个错误：
+<code>Uncaught TypeError: Cannot read property 'length' of undefined</code>。直接导致CHROME无法正确的加载TAB页面，解决方法也很直接，替换掉他的ONCLICK事件，
+我的做法比较粗暴：
+<code>
+<pre>
+$("span[onclick='ToLink(this)']").click(function(){
+    var vHref=$(this).attr("value");
+    if(vHref.length&lt;18) return false;
+    $("iframe[name='frmHomeShow']").attr("src",vHref);
+    event.preventDefault();
+});
+$("span[onclick='ToLink(this)']").removeAttr("onclick");
+</pre>
+</code></p>
+<p>貌似没啥难度哈……</p>
+<h4>登陆问题</h4>
+<p>简单的来说，就是在那个诡异的界面，登陆完之后，就会一直卡在加载权限数据这一个奇葩的状态下。当你再次刷新的时候他却提示你已登录……另外点击图片也没法刷新验证码。
+原因还是各种js错误，比如<code>Uncaught SyntaxError: Unexpected token .</code></p>
+<p>对于验证码刷新，还是没什么难度：</p>
+<p><code>
+<pre>
+$("#imgCode").removeAttr("onclick").click(function() {
+    var dt = new Date();
+    this.src="../sys/ValidateCode.aspx?t="+dt.getMilliseconds();
+});
+</pre>
+</code></p>
+<p>而对于登陆跳转，我找了半天愣是没找到原来的JS在什么鬼地方…………只能采取奇奇怪怪的方法了，最后写出了如下代码……</p>
+<p><code>
+<pre>
+if ($("#divLogNote").text()=="正在加载权限数据...") window.top.location.href="../MAINFRM.aspx";
+if (window.location.pathname.toLowerCase()=="/jwmis/_data/index_LoginNote.aspx".toLowerCase()) window.top.location.href="../MAINFRM.aspx";
+</pre>
+</code></p>
+<p>奇葩的解决了这个问题……</p>
+<h4>存在的Bug</h4>
+<p>目前各种弹出窗口的显示都有问题，各种白板，即使我已经修复了URL链接问题，介于看的人应该不多，先不折腾他了……</p>
+<h3>其他</h3>
+<p>咳咳，这货已经可以再Web store上下载到了，地址在<a href="https://chrome.google.com/webstore/detail/%E5%8C%97%E5%B8%88%E5%A4%A7%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9Fjs%E4%BF%AE%E6%AD%A3/ffkgjadiejddlbljnapiafglhgkhbpck">这里</a>
+截图什么的懒得搞了……</p>
+<p>以后想起什么有趣的功能（比如GPA计算什么的）可能会更新更新……</p><p class="subheader">Category: <a href="./category/blogs.html">Blogs</a>
+
+    Tagged: 
+        <a href="./tag/bnu.html">BNU </a>
+        <a href="./tag/sctl.html">sctl </a>
+        <a href="./tag/js.html">js </a>
+        <a href="./tag/jquery.html">jQuery </a>
+    </p>
+
+
+
+<p><a href="./bnu-sctl-js-fix.html#disqus_thread">comments</a></p>            </article>
+
+            
+                            <hr  class="gradient"/>
+            
+                
+                    
+
+                
+            <article>
+                <a href="./setting-up-xelatex-on-mac.html"><h3 class="article-title">在Mac上配置TeX环境以及中文支持</h3></a>
                 <h6 class="subheader" title="2013-04-12T19:43:39">五 12 四月 2013
     </h6>
 
@@ -72,28 +146,15 @@
 </li>
 <li>
 <p>在TeX文件文件头，使用如下代码：</p>
-<p><code>
-\documentclass[UTF8,nofonts]{ctexart}<br>
+<p><code><pre>
+\documentclass[UTF8,nofonts]{ctexart}
 \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
-</code></p>
+</pre></code></p>
 <p>例子：</p>
-<p><code>
-\documentclass[UTF8,nofonts]{ctexart}<br>
-\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}<br>
-\begin{document}<br>
-我是汉字啊！<br>
-\end{document}<br>
-</code></p>
-</li>
-<li>
-<p>用TeXworks打开.tex文件，选择XeLaTeX生成PDF文件，嗯，然后你就可以看到成品了。</p>
-</li>
-<li>
-<p>如果字体提示不对，那么请在终端里面使用<code>fc-list</code>命令查看你的系统有的字体，然后替换<code>setCJKmainfont</code>部分的字体。</p>
-</li>
-</ol>
-<h3>其他</h3>
-<p>我的简历可以在我的Github上看到，求各大公司包养啊！！！嗯，看起来MacTeX的中文也不是那么难搞嘛……</p><p class="subheader">Category: <a href="./category/blogs.html">Blogs</a>
+<p><code><pre>
+\documentclass[UTF8,nofonts]{ctexart}
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
+\begin ...</pre></code></p></li></ol><p class="subheader">Category: <a href="./category/blogs.html">Blogs</a>
 
     Tagged: 
         <a href="./tag/xelatex.html">XeLaTeX </a>
@@ -103,12 +164,10 @@
 
 
 
-<p><a href="./setting-up-xelatex-on-mac.html#disqus_thread">comments</a></p>            </article>
-
-            
-                            <hr  class="gradient"/>
-            
-                
+<p><a href="./setting-up-xelatex-on-mac.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="./setting-up-xelatex-on-mac.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
                     
 
                 
@@ -202,39 +261,6 @@
                 <hr  class="gradient"/>
             </article>
         
-                    
-
-                
-            <article>
-                <a href="./weekly-report-2013-03-20.html"><h3 class="article-title">2013-03-20工作报告</h3></a>
-                <h6 class="subheader" title="2013-03-20T15:00:00">三 20 三月 2013
-    </h6>
-
-
-<h3>已做：</h3>
-<ol>
-<li>将BNUOJ的代码从GOOGLE CODE迁移到了GITHUB上，学习了GIT的使用。</li>
-<li>继续修正了现有代码的BUG。</li>
-<li>由于现在后台部分使用的网络代码在非本机（lo）大文件传输时会卡死，所以研究了下网络库，初步考虑使用陈硕师兄写的Muduo，下周学习下。</li>
-<li>搭了个BLOG，以后每周工作或者技术文章都往BLOG放好了。</li>
-</ol>
-<h3>下周：</h3>
-<ol>
-<li>将剩余的功能移植到新OJ上：ADMIN，比赛的CHALLENGE功能。</li>
-<li>修复一下之前迁移服务器遗失的SPJ。</li>
-<li>项目还做不做？</li>
-</ol><p class="subheader">Category: <a href="./category/blogs.html">Blogs</a>
-
-    Tagged: 
-        <a href="./tag/weekly-report.html">weekly-report </a>
-    </p>
-
-
-
-<p><a href="./weekly-report-2013-03-20.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="./weekly-report-2013-03-20.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-        
                     <!-- /#posts-list -->
                             <div class="pagination-centered">
 <h6 class="subheader">Page 1 of 2</h6>
@@ -275,6 +301,7 @@
                     <li><a href="http://cn.linkedin.com/pub/chao-yi/49/544/42b">Linkedin</a></li>
                     <li><a href="http://weibo.com/51isoft">Weibo</a></li>
                     <li><a href="http://github.com/51isoft">Github</a></li>
+                    <li><a href="http://about.me/yichao">About.me</a></li>
                 </ul>
         
     </aside> <!-- End Sidebar -->
