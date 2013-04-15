@@ -45,7 +45,7 @@ if (window.location.pathname.toLowerCase()=="/jwmis/_data/index_LoginNote.aspx".
 &lt;h4&gt;存在的Bug&lt;/h4&gt;
 &lt;p&gt;目前各种弹出窗口的显示都有问题，各种白板，即使我已经修复了URL链接问题，介于看的人应该不多，先不折腾他了……&lt;/p&gt;
 &lt;h3&gt;其他&lt;/h3&gt;
-&lt;p&gt;咳咳，这货已经可以再Web store上下载到了，地址在&lt;a href="https://chrome.google.com/webstore/detail/%E5%8C%97%E5%B8%88%E5%A4%A7%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9Fjs%E4%BF%AE%E6%AD%A3/ffkgjadiejddlbljnapiafglhgkhbpck"&gt;这里&lt;/a&gt;
+&lt;p&gt;咳咳，这货已经可以再Web store上下载到了，地址在&lt;a href="https://chrome.google.com/webstore/detail/%E5%8C%97%E5%B8%88%E5%A4%A7%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9Fjs%E4%BF%AE%E6%AD%A3/ffkgjadiejddlbljnapiafglhgkhbpck"&gt;这里&lt;/a&gt;。
 截图什么的懒得搞了……&lt;/p&gt;
 &lt;p&gt;以后想起什么有趣的功能（比如GPA计算什么的）可能会更新更新……&lt;/p&gt;</summary><category term="BNU"></category><category term="sctl"></category><category term="js"></category><category term="jQuery"></category></entry><entry><title>在Mac上配置TeX环境以及中文支持</title><link href="http://blog.51isoft.com/setting-up-xelatex-on-mac.html" rel="alternate"></link><updated>2013-04-12T19:43:39+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-12:setting-up-xelatex-on-mac.html</id><summary type="html">&lt;p&gt;为了找工作做准备，找了个TeX的简历模板，然后猛然发现，我这台Mac上还没装TeX（其实吧……我也不会TeX……）……之前一直觉得对于全新手来说，折腾TeX的中文支持还是很疼的，
 不过为了装装X，还是决定搞一下了……&lt;/p&gt;
