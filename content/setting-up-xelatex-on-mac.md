@@ -18,20 +18,20 @@ MacTeX下载地址：[https://www.tug.org/mactex/downloading.html](https://www.t
 
 2.  在TeX文件文件头，使用如下代码：
 
-    <code>
-    \documentclass[UTF8,nofonts]{ctexart}<br>
+    <code><pre>
+    \documentclass[UTF8,nofonts]{ctexart}
     \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
-    </code>
+    </pre></code>
 
     例子：
 
-    <code>
-    \documentclass[UTF8,nofonts]{ctexart}<br>
-    \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}<br>
-    \begin{document}<br>
-    我是汉字啊！<br>
-    \end{document}<br>
-    </code>
+    <code><pre>
+    \documentclass[UTF8,nofonts]{ctexart}
+    \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
+    \begin{document}
+    我是汉字啊！
+    \end{document}
+    </pre></code>
 
 3.  用TeXworks打开.tex文件，选择XeLaTeX生成PDF文件，嗯，然后你就可以看到成品了。
 
