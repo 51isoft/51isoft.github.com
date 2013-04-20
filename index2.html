@@ -57,6 +57,40 @@
 
                 
             <article>
+                <a href="./stuff-about-bnuoj-1.html"><h3 class="article-title">BNUOJv2转v3开发记录1</h3></a>
+                <h6 class="subheader" title="2013-03-22T17:13:00">五 22 三月 2013
+    </h6>
+
+
+<p>先吐槽下：感觉pelican这种Date需要手写的真是奇葩呀，不能从文件属性里面读取最近修改时间？可能怕产生多次RSS推送么？
+然后鼠须管输入法用起来还是很舒爽的，恩，就是默认词库好弱啊！！所以我又用回QQ了我会乱说么……（懒得折腾了，QQ其实也还不错so……）</p>
+<p>正题了，V3相比V2的改变还是很多的，首先从用户的角度来看的话，UI换成Bootstrap了，虽然被一些人吐槽说丑吧（例如LSY……）但是绝大多数的反馈还是不错的。
+然后从我的角度来说，网页端目前是完全重构了。之前那个版本，估计在我毕业之后就没有人维护的下去了……所以重构了一下，所有涉及数据库操作的统统放到FUNCTIONS和AJAX里面去。
+本来想只放functions里面，AJAX也不操作数据库，但后来觉得没这个必要，而且之前用datatables等东西的时候就写了一些AJAX页面，正好也就免得再写了。</p>
+<p>functions文件夹里的东西还算是一目了然的，文件名就基本说明了他们的功能，感觉设计的比之前合理一些吧。AJAX文件夹里面就是各种返回JSON数据的货了，顺把login也放里面了。
+然后根文件夹里面就是各种前台页面了，前台页面不直接使用SQL语句，凡事有需要都调用functions里面的函数。另外像JS啊，CSS啊之类的也没有之前那么多文件夹了
+（之前datatables自己就是一个media文件夹），看着没这么烦了。</p>
+<p>前台方面的话，我抛弃jQueryUI了，因为……实在太丑了……转来转去觉得Bootstrap好像很不错的样子，所以果断就换掉了。其实有个jQueryUI的Bootstrap风格的项目，但是我没考虑，
+因为感觉直接换不太靠谱，而且据说兼容性问题也是有一些的 ...</p><p class="subheader">Category: <a href="./category/blogs.html">Blogs</a>
+
+    Tagged: 
+        <a href="./tag/bnuoj.html">bnuoj </a>
+        <a href="./tag/transtion.html">transtion </a>
+        <a href="./tag/jqueryui.html">jQueryUI </a>
+        <a href="./tag/bootstrap.html">Bootstrap </a>
+        <a href="./tag/jquery.html">jQuery </a>
+    </p>
+
+
+
+<p><a href="./stuff-about-bnuoj-1.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="./stuff-about-bnuoj-1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
+                    
+
+                
+            <article>
                 <a href="./weekly-report-2013-03-20.html"><h3 class="article-title">2013-03-20工作报告</h3></a>
                 <h6 class="subheader" title="2013-03-20T15:00:00">三 20 三月 2013
     </h6>
