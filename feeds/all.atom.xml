@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://blog.51isoft.com/" rel="alternate"></link><link href="http://blog.51isoft.com/feeds/all.atom.xml" rel="self"></link><id>http://blog.51isoft.com/</id><updated>2013-04-20T18:30:24+08:00</updated><entry><title>2013-04-20工作报告</title><link href="http://blog.51isoft.com/weekly-report-2013-04-20.html" rel="alternate"></link><updated>2013-04-20T18:30:24+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-20:weekly-report-2013-04-20.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>51isoft's Blog</title><link href="http://blog.51isoft.com/" rel="alternate"></link><link href="http://blog.51isoft.com/feeds/all.atom.xml" rel="self"></link><id>http://blog.51isoft.com/</id><updated>2013-05-15T13:30:24+08:00</updated><entry><title>2013-05-15工作报告</title><link href="http://blog.51isoft.com/weekly-report-2013-05-15.html" rel="alternate"></link><updated>2013-05-15T13:30:24+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-05-15:weekly-report-2013-05-15.html</id><summary type="html">&lt;p&gt;话说……为什么我会写周报呢……其实原因是每周一次的组会，老师要求要写的……&lt;/p&gt;
+&lt;h3&gt;已做：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;调通了Muduo网络监听的样例，可以写简单的程序了～&lt;/li&gt;
+&lt;li&gt;学习了History API，现在OJ的status界面可以前进后退了。&lt;/li&gt;
+&lt;li&gt;将题目爬虫整合进了新版OJ，方便校队之后训练使用。&lt;/li&gt;
+&lt;li&gt;已修复部分SPJ。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;下周：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;给后台引进一个处理INI文件的库。&lt;/li&gt;
+&lt;li&gt;重构后台控制端，并定义一下通讯协议。&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="weekly-report"></category></entry><entry><title>2013-04-20工作报告</title><link href="http://blog.51isoft.com/weekly-report-2013-04-20.html" rel="alternate"></link><updated>2013-04-20T18:30:24+08:00</updated><author><name>51isoft</name></author><id>tag:blog.51isoft.com,2013-04-20:weekly-report-2013-04-20.html</id><summary type="html">&lt;h3&gt;已做：&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;利用Boost写了一个简单的Timer，借此了解了Boost和C++11的一些特性。&lt;/li&gt;
 &lt;li&gt;学习了一下LaTeX，使用MacTeX写了写样例文档。&lt;/li&gt;
