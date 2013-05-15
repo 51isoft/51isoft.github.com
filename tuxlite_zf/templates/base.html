@@ -96,6 +96,14 @@
         </ul>
         {% endif %}
 
+        <h5 class="sidebar-title">RSS Feeds</h5>
+        <ul class="side-nav">
+            <li><a href="{{ SITEURL }}/feeds/all.atom.xml">All</a></li>
+        {% for cat, null in categories %}
+            <li><a href="{{ SITEURL }}/feeds/{{ cat }}.atom.xml">{{ cat }}</a></li>
+        {% endfor %}   
+        </ul>
+
     </aside> <!-- End Sidebar -->
 
 </div> <!-- End Main Content and Sidebar -->
